@@ -21,14 +21,15 @@ public class Flip2 : MonoBehaviour
         if (Input.GetKeyDown (KeyCode.Space))
         {
             //This sets the power of spin you would like and what direction.
-            float dirX = Random.Range(0, 500);
+            float dirX = Random.Range(250, 700);
             float dirY = Random.Range(0, 500);
-            float dirZ = Random.Range(0, 500);
+            float dirZ = Random.Range(200, 900);
             //This is the coin's starting position and rotation.
             transform.position = new Vector3(1, 2, 0);
+            //Quaternion = rotation values
             transform.rotation = Quaternion.identity;
             //This sets the force that it will send the coin upward.
-            coin.AddForce(transform.up * 500);
+            coin.AddForce(transform.up * 750);
             coin.AddTorque(dirX, dirY, dirZ);
         }
         
