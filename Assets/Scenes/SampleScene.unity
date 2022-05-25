@@ -150,10 +150,9 @@ GameObject:
   m_Component:
   - component: {fileID: 326622796}
   - component: {fileID: 326622798}
-  - component: {fileID: 326622797}
   - component: {fileID: 326622799}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Coin 1 Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,14 +172,6 @@ Transform:
   m_Father: {fileID: 2088956195}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 42.242, y: 0, z: 0}
---- !u!81 &326622797
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326622795}
-  m_Enabled: 1
 --- !u!20 &326622798
 Camera:
   m_ObjectHideFlags: 0
@@ -1011,10 +1002,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2142400685}
   - component: {fileID: 2142400684}
-  - component: {fileID: 2142400683}
   - component: {fileID: 2142400682}
   m_Layer: 0
-  m_Name: Camera (1)
+  m_Name: Coin 2 Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1034,14 +1024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: {fileID: 83968950}
   offset: {x: 0, y: 0, z: 0}
---- !u!81 &2142400683
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142400681}
-  m_Enabled: 1
 --- !u!20 &2142400684
 Camera:
   m_ObjectHideFlags: 0
