@@ -20,7 +20,7 @@ public class Tails : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         txt.text = "Result: Tails!";
-        Debug.Log("Tails.");
+        //Debug.Log("Tails.");
     }
 
 }
