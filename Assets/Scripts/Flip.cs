@@ -9,15 +9,15 @@ public class Flip : MonoBehaviour
 
     void Start()
     {
-        coin = GetComponent<Rigidbody>();
+        //this was to check that the cointoss actually worked.  //cointoss();
     }
-
-    void Update()
+    public void cointoss()
     {
+        coin = GetComponent<Rigidbody>();
         coinVelocity = coin.velocity;
 
-        //KeyCode assigns which key gets pressed to trigger the "flip"
-        if (Input.GetKeyDown(KeyCode.Space) && (coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0)) 
+        //KeyCode assigns which key gets pressed to trigger the "flip", the && means you cannot press while the vector3 velocity is >
+        if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0))
         {
             //This sets the power of spin you would like and what direction.
             float dirX = Random.Range(0, 500);
@@ -34,6 +34,11 @@ public class Flip : MonoBehaviour
             coin.AddForce(transform.up * 750);
             coin.AddTorque(dirX, dirY, dirZ);
         }
+
+    }
+
+    void Update()
+    {
 
     }
 }
