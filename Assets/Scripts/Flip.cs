@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Flip : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class Flip : MonoBehaviour
 
     void Start()
     {
-        //this was to check that the cointoss actually worked.  //cointoss();
+
     }
+
     public void cointoss()
     {
         coin = GetComponent<Rigidbody>();
