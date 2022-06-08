@@ -46,6 +46,7 @@ public class BettingGameManager : MonoBehaviour
     {
         //setting variable values
         playerCashStack = 25;
+        cashStackAmount.text = "$" + playerCashStack;
 
         //selecting canvas and camera
         flipCoinsandResultsCanvas.gameObject.SetActive(false);
@@ -63,6 +64,8 @@ public class BettingGameManager : MonoBehaviour
 
     private void BetAgain()
     {
+        cashStackAmount.text = "$" + playerCashStack;
+
         //selecting canvas and camera
         flipCoinsandResultsCanvas.gameObject.SetActive(false);
         Coin1.gameObject.SetActive(false);
@@ -75,6 +78,40 @@ public class BettingGameManager : MonoBehaviour
 
         playerFeedbackText.text = "Welcome back, how about another bet!\n What result do you think the coins will land on?";
 
+    }
+
+    private void BettingMenu()
+    {
+        threeBettingButtons.gameObject.SetActive(false);
+
+
+    }
+
+  
+    public void PlayersChoice(int buttonClicked)
+    {
+        if (buttonClicked == 1)
+        {
+            playerFeedbackText.text = "You have chosen:\n Both will land on Heads";
+            Debug.Log("Heads");
+            BettingMenu();
+        }
+        else if (buttonClicked == 2)
+        {
+            playerFeedbackText.text = "You have chosen:\n Both will land on Tails";
+            Debug.Log("Tails");
+            BettingMenu();
+        }
+        else if (buttonClicked == 3)
+        {
+            playerFeedbackText.text = "You have chosen: \n One will land on heads, one will land on tails.";
+            Debug.Log("One of Each");
+            BettingMenu();
+        }
+        else if (buttonClicked == 4)
+        {
+            BetAgain();
+        }
     }
 
     void Update()
