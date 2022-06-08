@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Tails : MonoBehaviour
 {
     public Text txt;
+    public int tailsResult;
+    public GameObject manager;
 
     void Start()
     {
@@ -19,8 +21,11 @@ public class Tails : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        txt.text = "Result: Tails!";
-        //Debug.Log("Tails.");
+
+         txt.text = "Result: Tails!";
+         tailsResult = 0;
+         //Debug.Log("Tails.");
+        
     }
 
 }

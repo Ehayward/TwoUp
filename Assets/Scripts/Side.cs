@@ -21,6 +21,7 @@ public class Side : MonoBehaviour
     {
         txt.text = "Result: Side...";
         //Debug.Log("Heads.");
+
     }
 
 }

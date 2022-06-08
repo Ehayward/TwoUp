@@ -28,8 +28,8 @@ public class BettingGameManager : MonoBehaviour
     public GameObject bettingValueCanvas;
 
     //Camera names
-    public GameObject Coin1;
-    public GameObject Coin2;
+    public Rigidbody Coin1;
+    public Rigidbody Coin2;
     public GameObject thirdPersonCamera;
     public GameObject mainMenuCamera;
 
@@ -38,6 +38,19 @@ public class BettingGameManager : MonoBehaviour
     public GameObject threeBettingButtons;
     public GameObject flipButton;
     public GameObject backButton;
+
+    //Game Object / Coin
+    public Tails tails;
+    public Heads heads;
+    public int result;
+    public static Vector3 coinVelocity2;
+    public static Vector3 coinVelocity1;
+   
+
+    //Results
+    public int oneOfEach = 1; 
+    public int twoHeads = 2;
+    public int twoTails = 0;
 
 
     void Start()
@@ -97,8 +110,6 @@ public class BettingGameManager : MonoBehaviour
         threeBettingButtons.gameObject.SetActive(false);
         bettingValueCanvas.gameObject.SetActive(true);
         backButton.gameObject.SetActive(true);
-
-
     }
 
   
@@ -134,10 +145,13 @@ public class BettingGameManager : MonoBehaviour
         Coin1.gameObject.SetActive(true);
         Coin2.gameObject.SetActive(true);
         thirdPersonCamera.SetActive(true);
+
         backButton.gameObject.SetActive(false);
-
-
         bettingValueCanvas.SetActive(false);
+
+        coinVelocity1 = Coin1.velocity;
+        coinVelocity2 = Coin2.velocity;
+
         if (playerChoice == 1)
         {
             playerFeedbackText.text = "Come on lucky Heads.";
@@ -151,16 +165,33 @@ public class BettingGameManager : MonoBehaviour
             playerFeedbackText.text = "Who needs luck, it's one of each.";
         }
 
+
     }
+
     public void ResultsScreen()
     {
-
+        Debug.Log("Results screen Proc");
+        /*
+        tails.tailsResult + heads.headsResult = result;
+        if (result == 1)
+        {
+            oneOfEach;
+        }
+        if (result == 2)
+        {
+            twoHeads;
+        }
+        if (result == 0)
+        {
+            twoTails;
+        }*/
     }
-
 
 
     void Update()
     {
         
     }
+
+
 }

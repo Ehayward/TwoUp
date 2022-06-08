@@ -372,6 +372,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257bca24a83132542848958408b9dc31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &83968953 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6037158555650787359, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+  m_PrefabInstance: {fileID: 1154511048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148839462
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,13 +569,19 @@ MonoBehaviour:
   bettingChoicesCanvas: {fileID: 1015856724}
   flipCoinsandResultsCanvas: {fileID: 1147195154}
   bettingValueCanvas: {fileID: 1383688698}
-  Coin1: {fileID: 1053685610}
-  Coin2: {fileID: 1982200575}
+  Coin1: {fileID: 1828475319}
+  Coin2: {fileID: 83968953}
   thirdPersonCamera: {fileID: 1410973147}
   mainMenuCamera: {fileID: 220710971}
   threeBettingButtons: {fileID: 400546248}
   flipButton: {fileID: 2074401290}
   backButton: {fileID: 393741684}
+  tails: {fileID: 0}
+  heads: {fileID: 0}
+  result: 0
+  oneOfEach: 1
+  twoHeads: 2
+  twoTails: 0
 --- !u!1 &222075122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +1765,12 @@ MonoBehaviour:
   threeBettingButtons: {fileID: 400546248}
   flipButton: {fileID: 0}
   backButton: {fileID: 0}
+  tails: {fileID: 0}
+  heads: {fileID: 0}
+  result: 0
+  oneOfEach: 1
+  twoHeads: 2
+  twoTails: 0
 --- !u!4 &772356979
 Transform:
   m_ObjectHideFlags: 0
@@ -2049,6 +2066,10 @@ PrefabInstance:
       propertyPath: txt
       value: 
       objectReference: {fileID: 1020906284}
+    - target: {fileID: 5569551068782535452, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 220710971}
     - target: {fileID: 6727268247755980651, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: coinForce
       value: 800
@@ -2057,6 +2078,10 @@ PrefabInstance:
       propertyPath: flipButton
       value: 
       objectReference: {fileID: 2074401290}
+    - target: {fileID: 6727268247755980651, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: bettingManager
+      value: 
+      objectReference: {fileID: 220710971}
     - target: {fileID: 7536717002702106013, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: m_Name
       value: Coin 1
@@ -2764,6 +2789,10 @@ PrefabInstance:
       propertyPath: txt
       value: 
       objectReference: {fileID: 254133360}
+    - target: {fileID: 5569551068782535452, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 220710971}
     - target: {fileID: 6525594391515053462, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4358,6 +4387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db16fb541c6c0d49a03182e26ab0807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1828475319 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6037158555650787359, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+  m_PrefabInstance: {fileID: 827305684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855984596
 GameObject:
   m_ObjectHideFlags: 0

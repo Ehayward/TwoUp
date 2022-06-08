@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Heads : MonoBehaviour
 {
     public Text txt;
+    public int headsResult;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Heads : MonoBehaviour
     {
         txt.text = "Result: Heads!";
         //Debug.Log("Heads.");
+        headsResult = 1;
     }
 
 }
