@@ -24,7 +24,8 @@ public class BettingGameManager : MonoBehaviour
 
     //Canvas names
     public GameObject bettingChoicesCanvas;
-    public GameObject flipCoinsandResultsCanvas;
+    public GameObject flipCoinsCanvas;
+    public GameObject resultsCanvas;
     public GameObject bettingValueCanvas;
 
     //Camera names
@@ -66,7 +67,7 @@ public class BettingGameManager : MonoBehaviour
         cashStackAmount.text = "$" + playerCashStack;
 
         //selecting canvas and camera
-        flipCoinsandResultsCanvas.gameObject.SetActive(false);
+        flipCoinsCanvas.gameObject.SetActive(false);
         bettingValueCanvas.gameObject.SetActive(false);
         Coin1.gameObject.SetActive(false);
         Coin2.gameObject.SetActive(false);
@@ -88,7 +89,7 @@ public class BettingGameManager : MonoBehaviour
         playerChoice = 0;
 
         //selecting canvas and camera
-        flipCoinsandResultsCanvas.gameObject.SetActive(false);
+        flipCoinsCanvas.gameObject.SetActive(false);
         bettingChoicesCanvas.gameObject.SetActive(false);
         Coin1.gameObject.SetActive(false);
         Coin2.gameObject.SetActive(false);
@@ -141,7 +142,7 @@ public class BettingGameManager : MonoBehaviour
 
     public void FlipScreen()
     {
-        flipCoinsandResultsCanvas.gameObject.SetActive(true);
+        flipCoinsCanvas.gameObject.SetActive(true);
         Coin1.gameObject.SetActive(true);
         Coin2.gameObject.SetActive(true);
         thirdPersonCamera.SetActive(true);
@@ -170,21 +171,11 @@ public class BettingGameManager : MonoBehaviour
 
     public void ResultsScreen()
     {
+
         Debug.Log("Results screen Proc");
-        /*
-        tails.tailsResult + heads.headsResult = result;
-        if (result == 1)
-        {
-            oneOfEach;
-        }
-        if (result == 2)
-        {
-            twoHeads;
-        }
-        if (result == 0)
-        {
-            twoTails;
-        }*/
+        resultsCanvas.SetActive(true);
+
+
     }
 
 
