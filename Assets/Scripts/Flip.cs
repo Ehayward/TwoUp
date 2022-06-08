@@ -8,6 +8,8 @@ public class Flip : MonoBehaviour
     static Rigidbody coin;
     public static Vector3 coinVelocity;
 
+    public GameObject flipButton;
+
     void Start()
     {
 
@@ -36,7 +38,7 @@ public class Flip : MonoBehaviour
             coin.AddForce(transform.up * 750);
             coin.AddTorque(dirX, dirY, dirZ);
         }
-
+        flipButton.gameObject.SetActive(false);
     }
 
     void Update()
