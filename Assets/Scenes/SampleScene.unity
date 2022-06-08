@@ -150,7 +150,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 772356979}
   - {fileID: 563230802}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1349,7 +1348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34134534}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592971712
 GameObject:
@@ -1719,72 +1718,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765173646}
   m_CullTransparentMesh: 1
---- !u!1 &772356977
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 772356979}
-  - component: {fileID: 772356978}
-  m_Layer: 0
-  m_Name: Betting System Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &772356978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772356977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eff1b011f09e37e429513efeb1d36fc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cashStackAmount: {fileID: 0}
-  playerFeedbackText: {fileID: 592971714}
-  bothTailsButton: {fileID: 0}
-  bothHeadsButton: {fileID: 0}
-  oneOfEachButton: {fileID: 0}
-  increaseBetButton: {fileID: 0}
-  decreaseBetButton: {fileID: 0}
-  bettingChoicesCanvas: {fileID: 1015856724}
-  flipCoinsandResultsCanvas: {fileID: 1147195154}
-  bettingValueCanvas: {fileID: 0}
-  Coin1: {fileID: 1053685610}
-  Coin2: {fileID: 1982200575}
-  thirdPersonCamera: {fileID: 1410973147}
-  mainMenuCamera: {fileID: 220710971}
-  threeBettingButtons: {fileID: 400546248}
-  flipButton: {fileID: 0}
-  backButton: {fileID: 0}
-  tails: {fileID: 0}
-  heads: {fileID: 0}
-  result: 0
-  oneOfEach: 1
-  twoHeads: 2
-  twoTails: 0
---- !u!4 &772356979
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772356977}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 34134534}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792727756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +1979,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1008226543986900626, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1402911618121432121, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2057,6 +1994,14 @@ PrefabInstance:
     - target: {fileID: 2791789559252530795, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660499004093286946, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150720026850444595, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5469265000037781656, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: m_RootOrder
@@ -2138,7 +2083,8 @@ PrefabInstance:
       propertyPath: txt
       value: 
       objectReference: {fileID: 1020906284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6727268247755980651, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
 --- !u!1 &873078173
 GameObject:
@@ -2507,11 +2453,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044329731}
   m_CullTransparentMesh: 1
---- !u!1 &1053685610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7536717002702106013, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
-  m_PrefabInstance: {fileID: 827305684}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083451348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,10 +4317,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8382415435633022710, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
   m_PrefabInstance: {fileID: 827305684}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1828475317 stripped
+--- !u!114 &1828475317
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6727268247755980651, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
-  m_PrefabInstance: {fileID: 827305684}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828475316}
   m_Enabled: 1
@@ -4387,6 +4329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db16fb541c6c0d49a03182e26ab0807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipButton: {fileID: 2074401290}
+  bettingManager: {fileID: 220710971}
+  coinself: {fileID: 1828475316}
 --- !u!54 &1828475319 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 6037158555650787359, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
@@ -4550,11 +4495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896335630}
   m_CullTransparentMesh: 1
---- !u!1 &1982200575 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7536717002702106013, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
-  m_PrefabInstance: {fileID: 1154511048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2042293562
 GameObject:
   m_ObjectHideFlags: 0
