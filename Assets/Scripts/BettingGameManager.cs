@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class BettingGameManager : MonoBehaviour
 {
     //variable names
-    private int playerCashStack;
+    //public int playerCashStack;
     private int playerChoice;
-    private int betValue;
-    private int coinResults;
+    //private int betValue;
+    //private int coinResults;
+
+    //Cash Value Manager Name
+    CashValue cashValue;
 
     //Text names
     public Text cashStackAmount;
@@ -56,15 +59,19 @@ public class BettingGameManager : MonoBehaviour
 
     void Start()
     {
+        cashValue=GameObject.FindGameObjectWithTag("CashManager").GetComponent<CashValue>();
+        cashValue.PlayerCashStack();
+
+
         NewGame();
     }
 
     private void NewGame()
     {
         //setting variable values
-        playerCashStack = 25;
+        //playerCashStack = 50;
         playerChoice = 0;
-        cashStackAmount.text = "$" + playerCashStack;
+        cashStackAmount.text = "$" + cashValue.playerCashStack;
 
         //selecting canvas and camera
         flipCoinsCanvas.gameObject.SetActive(false);
@@ -85,7 +92,7 @@ public class BettingGameManager : MonoBehaviour
 
     private void BetAgain()
     {
-        cashStackAmount.text = "$" + playerCashStack;
+        cashStackAmount.text = "$" + cashValue.playerCashStack;
         playerChoice = 0;
 
         //selecting canvas and camera
@@ -96,6 +103,7 @@ public class BettingGameManager : MonoBehaviour
         thirdPersonCamera.SetActive(false);
         bettingValueCanvas.SetActive(false);
         backButton.gameObject.SetActive(false);
+        resultsCanvas.SetActive(false);
 
         bettingChoicesCanvas.gameObject.SetActive(true);
         mainMenuCamera.SetActive(true);
