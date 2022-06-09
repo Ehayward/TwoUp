@@ -50,7 +50,10 @@ public class BettingGameManager : MonoBehaviour
     public int result;
     public static Vector3 coinVelocity2;
     public static Vector3 coinVelocity1;
-   
+
+    //Bet reset shidd
+    public GameObject wagerManager;
+
 
     //Results
     public int oneOfEach = 1; 
@@ -111,8 +114,11 @@ public class BettingGameManager : MonoBehaviour
         threeBettingButtons.gameObject.SetActive(true);
         flipButton.gameObject.SetActive(true);
 
+
+        //RESETS Bet Value, Wagered amount and the state of the text.
         GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().betAmount = 1;
         GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount = 0;
+        wagerManager.GetComponent<WagerValue>().DisplayTheNumber();
 
         playerFeedbackText.text = "Welcome back, how about another bet!\n What result do you think the coins will land on?";
 

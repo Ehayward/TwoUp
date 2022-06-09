@@ -61,7 +61,7 @@ public class WagerValue : MonoBehaviour
     }
 
 
-    void DisplayTheNumber()
+    public void DisplayTheNumber()
     {
         textDisplayNumber.text = "$" + betAmount.ToString();
 

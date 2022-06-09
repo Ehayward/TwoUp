@@ -804,6 +804,7 @@ MonoBehaviour:
   tails: {fileID: 0}
   heads: {fileID: 0}
   result: 0
+  wagerManager: {fileID: 1623825938}
   oneOfEach: 1
   twoHeads: 2
   twoTails: 0
@@ -4565,6 +4566,7 @@ MonoBehaviour:
   textDisplayNumber: {fileID: 1349065323}
   increaseButton: {fileID: 66547951}
   decreaseButton: {fileID: 599774567}
+  betAmount: 1
   wageredAmount: 0
 --- !u!1 &1650105850
 GameObject:
