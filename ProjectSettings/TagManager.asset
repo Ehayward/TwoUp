@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - CashManager
   - WagerManager
+  - ResultsManager
+  - BettingManager
   layers:
   - Default
   - TransparentFX

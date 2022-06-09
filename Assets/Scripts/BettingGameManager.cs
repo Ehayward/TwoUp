@@ -7,7 +7,7 @@ public class BettingGameManager : MonoBehaviour
 {
     //variable names
     //public int playerCashStack;
-    private int playerChoice;
+    public int playerChoice;
     //private int betValue;
     //private int coinResults;
 
@@ -146,6 +146,9 @@ public class BettingGameManager : MonoBehaviour
         {
             BetAgain();
         }
+
+
+
     }
 
     public void FlipScreen()
