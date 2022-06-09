@@ -21,7 +21,6 @@ public class Heads : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         txt.text = "Result: Heads!";
-        //Debug.Log("Heads.");
         headsResult = 1;
     }
 

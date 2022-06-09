@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5569551068782535452}
   m_Layer: 0
   m_Name: Tails
-  m_TagString: Untagged
+  m_TagString: Tails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
+  tailsResult: 0
+  manager: {fileID: 0}
 --- !u!64 &3841812603175700867
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -108,7 +110,7 @@ GameObject:
   - component: {fileID: 8998879002354024203}
   m_Layer: 0
   m_Name: Heads
-  m_TagString: Untagged
+  m_TagString: Heads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
+  headsResult: 0
 --- !u!1 &7536717002702106013
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db16fb541c6c0d49a03182e26ab0807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipButton: {fileID: 0}
+  bettingManager: {fileID: 0}
+  coinself: {fileID: 0}
 --- !u!1001 &5506779705237829491
 PrefabInstance:
   m_ObjectHideFlags: 0

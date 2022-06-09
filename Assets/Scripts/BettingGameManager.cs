@@ -7,12 +7,13 @@ public class BettingGameManager : MonoBehaviour
 {
     //variable names
     //public int playerCashStack;
-    private int playerChoice;
+    public int playerChoice;
     //private int betValue;
     //private int coinResults;
 
     //Cash Value Manager Name
     CashValue cashValue;
+    ResultsManager resultsManager;
 
     //Text names
     public Text cashStackAmount;
@@ -180,7 +181,10 @@ public class BettingGameManager : MonoBehaviour
     public void ResultsScreen()
     {
 
-        Debug.Log("Results screen Proc");
+        //Debug.Log("Results screen Proc");
+        resultsManager.GetComponent<ResultsManager>().ResultsCalculator();
+
+
         resultsCanvas.SetActive(true);
 
 
