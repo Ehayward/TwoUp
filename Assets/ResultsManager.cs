@@ -15,7 +15,7 @@ public class ResultsManager : MonoBehaviour
 
     public void ResultsCalculator()
     {
-
+        Debug.Log("CallingResultsCalculator");
     }
 
     public void PlayersChoice(int buttonClicked)

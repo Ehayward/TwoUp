@@ -51,9 +51,9 @@ public class BettingGameManager : MonoBehaviour
     public static Vector3 coinVelocity2;
     public static Vector3 coinVelocity1;
 
-    //Bet reset shidd
+    //Other Manager Script's names set as gameobjects
     public GameObject wagerManager;
-
+    public GameObject resultsManager;
 
     //Results
     public int oneOfEach = 1; 
@@ -193,7 +193,8 @@ public class BettingGameManager : MonoBehaviour
     public void ResultsScreen()
     {
 
-        Debug.Log("Results screen Proc");
+        //Debug.Log("Results screen Proc");
+        resultsManager.GetComponent<ResultsManager>().ResultsCalculator();
         resultsCanvas.SetActive(true);
 
 

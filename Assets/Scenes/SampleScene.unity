@@ -152,7 +152,7 @@ Transform:
   m_Children:
   - {fileID: 563230802}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &62872244
 GameObject:
@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 220710973}
   - component: {fileID: 220710975}
   m_Layer: 0
-  m_Name: Menu Camera
+  m_Name: Menu Camera (Betting Manager)
   m_TagString: BettingManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,7 +768,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &220710975
 MonoBehaviour:
@@ -805,6 +805,7 @@ MonoBehaviour:
   heads: {fileID: 0}
   result: 0
   wagerManager: {fileID: 1623825938}
+  resultsManager: {fileID: 2041007200}
   oneOfEach: 1
   twoHeads: 2
   twoTails: 0
@@ -839,7 +840,7 @@ Transform:
   - {fileID: 1369902311}
   - {fileID: 819331370}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254133358
 GameObject:
