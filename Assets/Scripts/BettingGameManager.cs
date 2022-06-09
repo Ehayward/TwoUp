@@ -13,6 +13,7 @@ public class BettingGameManager : MonoBehaviour
 
     //Cash Value Manager Name
     CashValue cashValue;
+    WagerValue wagerValue;
 
     //Text names
     public Text cashStackAmount;
@@ -109,6 +110,9 @@ public class BettingGameManager : MonoBehaviour
         mainMenuCamera.SetActive(true);
         threeBettingButtons.gameObject.SetActive(true);
         flipButton.gameObject.SetActive(true);
+
+        GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().betAmount = 1;
+        GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount = 0;
 
         playerFeedbackText.text = "Welcome back, how about another bet!\n What result do you think the coins will land on?";
 

@@ -13,7 +13,7 @@ public class WagerValue : MonoBehaviour
     public GameObject increaseButton;
     public GameObject decreaseButton;
 
-    int betAmount = 1;
+    public int betAmount = 1;
     public int wageredAmount;
 
 
@@ -88,7 +88,11 @@ public class WagerValue : MonoBehaviour
     public void LockInBet()
     {
         wageredAmount = betAmount;
-        //Debug.Log(wageredAmount + " Has been loaded as the wagered amount.");
+    }
+
+    public void ResetBetAmount()
+    {
+        betAmount = 1;
     }
 
     void Update()
