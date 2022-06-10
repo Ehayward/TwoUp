@@ -135,19 +135,19 @@ public class BettingGameManager : MonoBehaviour
     {
         if (buttonClicked == 1)
         {
-            playerFeedbackText.text = "You have chosen:\n Both will land on Heads";
+            playerFeedbackText.text = "You have chosen:\n Both will land on Heads\n You will get x4 back from your bet if you are correct.";
             BettingMenu();
             playerChoice = 1;
         }
         else if (buttonClicked == 2)
         {
-            playerFeedbackText.text = "You have chosen:\n Both will land on Tails";
+            playerFeedbackText.text = "You have chosen:\n Both will land on Tails\n You will get x4 back from your bet if you are correct.";
             BettingMenu();
             playerChoice = 2;
         }
         else if (buttonClicked == 3)
         {
-            playerFeedbackText.text = "You have chosen: \n One will land on heads, one will land on tails.";
+            playerFeedbackText.text = "You have chosen: \n One will land on heads, one will land on tails. \n You will get x2 back from your bet if you are correct.";
             BettingMenu();
             playerChoice = 3;
         }

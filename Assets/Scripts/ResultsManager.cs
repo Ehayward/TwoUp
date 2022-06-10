@@ -108,7 +108,7 @@ public class ResultsManager : MonoBehaviour
             {
                 if (playerChoice == 3 && (heads1result + heads2result + tails2result + tails1result == 1))
                 {
-                    cashValue.GetComponent<CashValue>().CashStackAfterWin();
+                    cashValue.GetComponent<CashValue>().CashStackAfterOOEWin();
                     bettingManager.GetComponent<BettingGameManager>().WinnerScreen();
                     resultText.text = "Your bet was correct!";
                     Debug.Log("Win Triggered");

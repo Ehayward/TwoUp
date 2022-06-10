@@ -27,6 +27,11 @@ public class CashValue : MonoBehaviour
 
     public void CashStackAfterWin()
     {
+        playerCashStack += (GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount * 4);
+        PlayerCashStack();
+    }
+    public void CashStackAfterOOEWin()
+    {
         playerCashStack += (GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount * 2);
         PlayerCashStack();
     }
