@@ -7,11 +7,15 @@ public class Tails : MonoBehaviour
 {
     public Text txt;
     public int tailsResult;
-    public GameObject manager;
+    bool Landed = false;
+
+    public GameObject coinCarrier;
+    static Rigidbody coin;
+    public static Vector3 coinVelocity;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -19,13 +23,31 @@ public class Tails : MonoBehaviour
 
     }
 
-    void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
+        Landed = true;
+        txt.text = "Result: Tails!";
 
-         txt.text = "Result: Tails!";
-         tailsResult = 0;
-         //Debug.Log("Tails.");
-        
+         //Debug.Log("Tails.");    
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        Landed = false;
+    }
+
+    public void Result()
+    {
+        if (Landed == true) 
+        {
+            tailsResult = 0;
+            Debug.Log(tailsResult);
+        }
+        else
+        {
+
+        }
+
+
     }
 
 }

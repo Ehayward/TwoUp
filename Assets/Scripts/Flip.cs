@@ -49,16 +49,16 @@ public class Flip : MonoBehaviour
     void Update()
     {
         coinVelocity = coin.velocity;
-        if (this.transform.position.y > 5)
+       if (this.transform.position.y > 5)
         {
             flipped = true;
         }
-        //Debug.Log(coinVelocity[0] + coinVelocity[1] + coinVelocity[2]);
+
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0) && flipped == true)
         {
             bettingManager.GetComponent<BettingGameManager>().ResultsScreen();
             flipped = false;
         }
-
+       
     }
 }

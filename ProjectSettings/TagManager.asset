@@ -9,6 +9,12 @@ TagManager:
   - WagerManager
   - ResultsManager
   - BettingManager
+  - Coin 1 Heads
+  - Coin 1 Tails
+  - Coin 2 Heads
+  - Coin 1 Side
+  - Coin 2 Tails
+  - Coin 2 Side
   layers:
   - Default
   - TransparentFX

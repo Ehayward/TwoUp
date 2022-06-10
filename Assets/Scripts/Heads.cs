@@ -7,22 +7,48 @@ public class Heads : MonoBehaviour
 {
     public Text txt;
     public int headsResult;
+    bool Landed = false;
+
+    public GameObject coinCarrier;
+    static Rigidbody coin;
+    public static Vector3 coinVelocity;
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-  
+
     }
 
-    void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         txt.text = "Result: Heads!";
+        Landed = true;
+
         //Debug.Log("Heads.");
-        headsResult = 1;
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        Landed = false;
+    }
+
+    public void Result()
+    {
+        if (Landed == true) 
+        {
+            headsResult = 1;
+            Debug.Log(headsResult);
+        }
+        else
+        {
+
+        }
+
+
     }
 
 }
