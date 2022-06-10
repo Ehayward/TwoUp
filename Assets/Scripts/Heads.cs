@@ -25,10 +25,8 @@ public class Heads : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        txt.text = "Result: Heads!";
         Landed = true;
 
-        //Debug.Log("Heads.");
     }
 
     public void OnTriggerExit(Collider other)

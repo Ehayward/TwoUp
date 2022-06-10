@@ -21,9 +21,7 @@ public class Flip : MonoBehaviour
 
     public void cointoss()
     {
-        
-        
-        //Debug.Log(coinVelocity[0] + coinVelocity[1] + coinVelocity[2]);
+
 
         //KeyCode assigns which key gets pressed to trigger the "flip", the && means you cannot press while the vector3 velocity is >
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0))

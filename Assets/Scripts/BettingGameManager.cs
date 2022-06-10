@@ -5,19 +5,17 @@ using UnityEngine.UI;
 
 public class BettingGameManager : MonoBehaviour
 {
-    //variable names
-    //public int playerCashStack;
+    //Option variable.
     public int playerChoice;
-    //private int betValue;
-    //private int coinResults;
 
-    //Cash Value Manager Name
+    //Other Manager Scripts
     CashValue cashValue;
     WagerValue wagerValue;
 
     //Text names
     public Text cashStackAmount;
     public Text playerFeedbackText;
+    public Text resultText;
 
     //Button names
     public Button bothTailsButton;
@@ -46,7 +44,7 @@ public class BettingGameManager : MonoBehaviour
     public GameObject backButton;
     public GameObject newGameButton;
 
-    //Game Object / Coin
+    //Game Object / Coin data
     public Tails tails;
     public Heads heads;
     public int result;
@@ -56,12 +54,6 @@ public class BettingGameManager : MonoBehaviour
     //Other Manager Script's names set as gameobjects
     public GameObject wagerManager;
     public GameObject resultsManager;
-
-    //Results
-    public int oneOfEach = 1; 
-    public int twoHeads = 2;
-    public int twoTails = 0;
-
 
     void Start()
     {
@@ -94,7 +86,7 @@ public class BettingGameManager : MonoBehaviour
         flipButton.gameObject.SetActive(true);
 
 
-
+        resultText.text = "";
         playerFeedbackText.text = "Welcome to Two-Up!\n What result do you think the coins will land on?";
 
     }
@@ -118,6 +110,8 @@ public class BettingGameManager : MonoBehaviour
         mainMenuCamera.SetActive(true);
         threeBettingButtons.gameObject.SetActive(true);
         flipButton.gameObject.SetActive(true);
+
+        resultText.text = "";
 
 
         //RESETS Bet Value, Wagered amount and the state of the text.
@@ -181,15 +175,15 @@ public class BettingGameManager : MonoBehaviour
 
         if (playerChoice == 1)
         {
-            playerFeedbackText.text = "Come on lucky Heads.";
+            playerFeedbackText.text = "You bet TWO HEADS";
         }
         else if (playerChoice == 2)
         {
-            playerFeedbackText.text = "Come on lucky Tails.";
+            playerFeedbackText.text = "you bet TWO TAILS.";
         }
         else if (playerChoice == 3)
         {
-            playerFeedbackText.text = "Who needs luck, it's one of each.";
+            playerFeedbackText.text = "You bet ONE OF EACH";
         }
 
 
@@ -208,9 +202,6 @@ public class BettingGameManager : MonoBehaviour
 
         newGameButton.gameObject.SetActive(true);
 
-        Coin1.gameObject.SetActive(false);
-        Coin2.gameObject.SetActive(false);
-        thirdPersonCamera.SetActive(false);
         bettingValueCanvas.SetActive(false);
         bettingChoicesCanvas.gameObject.SetActive(false);
         flipCoinsCanvas.gameObject.SetActive(false);

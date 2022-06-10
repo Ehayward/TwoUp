@@ -26,9 +26,7 @@ public class Tails : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         Landed = true;
-        txt.text = "Result: Tails!";
-
-         //Debug.Log("Tails.");    
+   
     }
     public void OnTriggerExit(Collider other)
     {
