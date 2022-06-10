@@ -25,6 +25,19 @@ public class CashValue : MonoBehaviour
         PlayerCashStack();
     }
 
+    public void CashStackAfterWin()
+    {
+        playerCashStack += (GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount * 2);
+        PlayerCashStack();
+    }
+
+    public void ResetCashStack()
+    {
+        playerCashStack = 5;
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {

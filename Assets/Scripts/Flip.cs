@@ -56,6 +56,7 @@ public class Flip : MonoBehaviour
 
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0) && flipped == true)
         {
+           
             bettingManager.GetComponent<BettingGameManager>().ResultsScreen();
             flipped = false;
         }

@@ -31,6 +31,7 @@ public class BettingGameManager : MonoBehaviour
     public GameObject flipCoinsCanvas;
     public GameObject resultsCanvas;
     public GameObject bettingValueCanvas;
+    public GameObject constantCanvas;
 
     //Camera names
     public Rigidbody Coin1;
@@ -43,6 +44,7 @@ public class BettingGameManager : MonoBehaviour
     public GameObject threeBettingButtons;
     public GameObject flipButton;
     public GameObject backButton;
+    public GameObject newGameButton;
 
     //Game Object / Coin
     public Tails tails;
@@ -63,15 +65,13 @@ public class BettingGameManager : MonoBehaviour
 
     void Start()
     {
-        cashValue=GameObject.FindGameObjectWithTag("CashManager").GetComponent<CashValue>();
-        cashValue.PlayerCashStack();
-
-
         NewGame();
     }
 
-    private void NewGame()
+    public void NewGame()
     {
+        cashValue = GameObject.FindGameObjectWithTag("CashManager").GetComponent<CashValue>();
+        cashValue.ResetCashStack();
         //setting variable values
         //playerCashStack = 50;
         playerChoice = 0;
@@ -79,22 +79,27 @@ public class BettingGameManager : MonoBehaviour
 
         //selecting canvas and camera
         flipCoinsCanvas.gameObject.SetActive(false);
-        bettingValueCanvas.gameObject.SetActive(false);
+        bettingChoicesCanvas.gameObject.SetActive(false);
         Coin1.gameObject.SetActive(false);
         Coin2.gameObject.SetActive(false);
         thirdPersonCamera.SetActive(false);
+        bettingValueCanvas.SetActive(false);
         backButton.gameObject.SetActive(false);
-
+        resultsCanvas.SetActive(false);
+        newGameButton.gameObject.SetActive(false);
 
         bettingChoicesCanvas.gameObject.SetActive(true);
         mainMenuCamera.SetActive(true);
+        threeBettingButtons.gameObject.SetActive(true);
         flipButton.gameObject.SetActive(true);
+
+
 
         playerFeedbackText.text = "Welcome to Two-Up!\n What result do you think the coins will land on?";
 
     }
 
-    private void BetAgain()
+    public void BetAgain()
     {
         cashStackAmount.text = "$" + cashValue.playerCashStack;
         playerChoice = 0;
@@ -194,17 +199,33 @@ public class BettingGameManager : MonoBehaviour
     {
 
         //Debug.Log("Results screen Proc");
-        resultsManager.GetComponent<ResultsManager>().ResultsCalculator();
-        resultsCanvas.SetActive(true);
-
+        resultsManager.GetComponent<ResultsManager>().Payout();
 
     }
 
+    public void GamerOverScreen()
+    {
+
+        newGameButton.gameObject.SetActive(true);
+
+        Coin1.gameObject.SetActive(false);
+        Coin2.gameObject.SetActive(false);
+        thirdPersonCamera.SetActive(false);
+        bettingValueCanvas.SetActive(false);
+        bettingChoicesCanvas.gameObject.SetActive(false);
+        flipCoinsCanvas.gameObject.SetActive(false);
+        backButton.gameObject.SetActive(false);
+        resultsCanvas.SetActive(false);
+    }
+
+    public void WinnerScreen()
+    {
+        resultsCanvas.SetActive(true);
+    }
 
     void Update()
     {
         
     }
-
 
 }
