@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResultsManager : MonoBehaviour
 {
     CashValue cashValue;
+    WagerValue wagerValue;
     BettingGameManager bettingGameManager;
 
     int coin1Heads;
@@ -15,8 +16,10 @@ public class ResultsManager : MonoBehaviour
     int coin2Tails;
     int coin2Side;
 
-    //Tails results = 0
-    //Heads resutls = 1
+    public bool bothHeadsResult;
+    public bool bothTailsResult;
+    public bool oneOfEachResult;
+
     public GameObject heads1;
     public GameObject tails1;
     public GameObject side1;
@@ -25,21 +28,48 @@ public class ResultsManager : MonoBehaviour
     public GameObject tails2;
     public GameObject side2;
 
+
     void Start()
     {
-
+        bothHeadsResult = false;
+        bothTailsResult = false;
+        oneOfEachResult = false;
     }
 
     
     public void ResultsCalculator()
     {
-        Debug.Log("CallingResultsCalculator");
 
-        heads1.GetComponent<Heads>().Result();
-        tails1.GetComponent<Tails>().Result();
+        int heads1result = heads1.GetComponent<Heads>().Result();
+        int tails1result = tails1.GetComponent<Tails>().Result();
 
-        heads2.GetComponent<Heads>().Result();
-        tails2.GetComponent<Tails>().Result();
+        int heads2result = heads2.GetComponent<Heads>().Result();
+        int tails2result = tails2.GetComponent<Tails>().Result();
+
+        //Debug.Log("Coin 1 " + heads1result);
+        //Debug.Log("Coin 1 " + tails1result);
+        //Debug.Log("Coin 2 " + tails2result);
+        //Debug.Log("Coin 2 " + heads2result);
+
+        //Tails results = 0
+        //Heads resutls = 1
+
+        if (heads1result + tails1result + heads2result + tails2result == 2)
+        {
+            bothHeadsResult = true;
+        }
+        else if (heads1result + tails1result + heads2result + tails2result == 0)
+        {
+            bothTailsResult = true;
+        }
+        else if (heads1result + tails1result + heads2result + tails2result == 1)
+        {
+            oneOfEachResult = true;
+        }
+
+        //Debug.Log("Both Heads " + bothHeadsResult);
+        //Debug.Log("Both Tails " + bothTailsResult);
+        //Debug.Log("One of Each " + oneOfEachResult);
 
     }
 

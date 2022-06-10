@@ -36,17 +36,19 @@ public class Heads : MonoBehaviour
         Landed = false;
     }
 
-    public void Result()
+    public int Result()
     {
         if (Landed == true) 
         {
             headsResult = 1;
-            Debug.Log(headsResult);
+
         }
         else
         {
-
+            headsResult = 0;
         }
+        return headsResult;
+       
 
 
     }

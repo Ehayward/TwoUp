@@ -35,18 +35,18 @@ public class Tails : MonoBehaviour
         Landed = false;
     }
 
-    public void Result()
+    public int Result()
     {
         if (Landed == true) 
         {
             tailsResult = 0;
-            Debug.Log(tailsResult);
+
         }
         else
         {
 
         }
-
+        return tailsResult;
 
     }
 
