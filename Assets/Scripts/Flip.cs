@@ -48,7 +48,7 @@ public class Flip : MonoBehaviour
             transform.rotation = Quaternion.identity;
 
             //This sets the force that it will send the coin upward.
-            coin.AddForce(transform.up * 650);
+            coin.AddForce(transform.up * 750);
             coin.AddTorque(dirX, dirY, dirZ);
         }
         flipButton.gameObject.SetActive(false);
