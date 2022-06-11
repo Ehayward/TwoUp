@@ -3457,6 +3457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8382415435633022710, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: m_TagString
+      value: Coin2Self
+      objectReference: {fileID: 0}
     - target: {fileID: 8998879002354024203, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: txt
       value: 
@@ -5381,6 +5385,7 @@ MonoBehaviour:
   flipButton: {fileID: 2074401290}
   bettingManager: {fileID: 220710971}
   coinself: {fileID: 1828475316}
+  coin2: {fileID: 83968950}
 --- !u!54 &1828475319 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 6037158555650787359, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
