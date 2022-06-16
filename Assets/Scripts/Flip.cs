@@ -37,7 +37,7 @@ public class Flip : MonoBehaviour
             float dirZ = Random.Range(110, 300);
 
             //This is the coin's starting position and rotation.
-            transform.position = new Vector3(0, 2, 0);
+            transform.position = new Vector3(2, 2, 0);
 
             //Quaternion = rotation values
             transform.rotation = Quaternion.identity;
