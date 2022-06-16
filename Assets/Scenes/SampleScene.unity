@@ -600,11 +600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257bca24a83132542848958408b9dc31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &83968953 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 6037158555650787359, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
-  m_PrefabInstance: {fileID: 1154511048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &107247601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4660499004093286946, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
@@ -797,7 +792,7 @@ MonoBehaviour:
   playerFeedbackText: {fileID: 592971714}
   resultText: {fileID: 1961881504}
   bothTailsButton: {fileID: 514636793}
-  bothHeadsButton: {fileID: 1083451350}
+  bothHeadsBFutton: {fileID: 0}
   oneOfEachButton: {fileID: 1559904093}
   increaseBetButton: {fileID: 66547953}
   decreaseBetButton: {fileID: 599774569}
@@ -806,8 +801,8 @@ MonoBehaviour:
   resultsCanvas: {fileID: 1224490694}
   bettingValueCanvas: {fileID: 1383688698}
   constantCanvas: {fileID: 2135600680}
-  Coin1: {fileID: 1828475319}
-  Coin2: {fileID: 83968953}
+  Coin1: {fileID: 2006963457}
+  Coin2: {fileID: 1110335404}
   thirdPersonCamera: {fileID: 1410973147}
   mainMenuCamera: {fileID: 220710971}
   threeBettingButtons: {fileID: 400546248}
@@ -3206,6 +3201,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCashStack: 5
   cashStackAmount: {fileID: 1307865014}
+--- !u!1 &1110335404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536717002702106013, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+  m_PrefabInstance: {fileID: 1154511048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1147195154
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,11 +5406,6 @@ MonoBehaviour:
   bettingManager: {fileID: 220710971}
   coinself: {fileID: 1828475316}
   coin2: {fileID: 83968950}
---- !u!54 &1828475319 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 6037158555650787359, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
-  m_PrefabInstance: {fileID: 827305684}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855984596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,6 +5648,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961881502}
   m_CullTransparentMesh: 1
+--- !u!1 &2006963457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536717002702106013, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+  m_PrefabInstance: {fileID: 827305684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2041007200
 GameObject:
   m_ObjectHideFlags: 0

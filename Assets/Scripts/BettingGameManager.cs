@@ -19,7 +19,7 @@ public class BettingGameManager : MonoBehaviour
 
     //Button names
     public Button bothTailsButton;
-    public Button bothHeadsButton;
+    public Button bothHeadsBFutton;
     public Button oneOfEachButton;
     public Button increaseBetButton;
     public Button decreaseBetButton;
@@ -32,8 +32,8 @@ public class BettingGameManager : MonoBehaviour
     public GameObject constantCanvas;
 
     //Camera names
-    public Rigidbody Coin1;
-    public Rigidbody Coin2;
+    public GameObject Coin1;
+    public GameObject Coin2;
     public GameObject thirdPersonCamera;
     public GameObject mainMenuCamera;
 
@@ -173,9 +173,6 @@ public class BettingGameManager : MonoBehaviour
 
         backButton.gameObject.SetActive(false);
         bettingValueCanvas.SetActive(false);
-
-        coinVelocity1 = Coin1.velocity;
-        coinVelocity2 = Coin2.velocity;
 
         if (playerChoice == 1)
         {
