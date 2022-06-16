@@ -18,22 +18,16 @@ public class Flip : MonoBehaviour
     static Rigidbody coin2rb;
     public static Vector3 coin2Velocity;
 
-
-
     bool flipped = false;
 
     void Start()
     {
         coin = GetComponent<Rigidbody>();
         coin2rb = coin2.GetComponent<Rigidbody>();
-
-
     }
 
     public void cointoss()
     {
-
-
         //KeyCode assigns which key gets pressed to trigger the "flip", the && means you cannot press while the vector3 velocity is >
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0))
         {
@@ -60,16 +54,13 @@ public class Flip : MonoBehaviour
         coinVelocity = coin.velocity;
         coin2Velocity = coin2rb.velocity;
 
-        
         if (this.transform.position.y > 5)
         {
             flipped = true;
-            
         }
 
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0) && flipped == true && (coin2Velocity[0] == 0) && (coin2Velocity[1] == 0) && (coin2Velocity[2] == 0))
         {
-           
             bettingManager.GetComponent<BettingGameManager>().ResultsScreen();
             flipped = false;
         }
