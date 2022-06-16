@@ -64,6 +64,11 @@ public class BettingGameManager : MonoBehaviour
     {
         cashValue = GameObject.FindGameObjectWithTag("CashManager").GetComponent<CashValue>();
         cashValue.ResetCashStack();
+
+        GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().betAmount = 1;
+        GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount = 0;
+        wagerManager.GetComponent<WagerValue>().DisplayTheNumber();
+
         //setting variable values
         //playerCashStack = 50;
         playerChoice = 0;
