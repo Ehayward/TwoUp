@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Flip : MonoBehaviour
 {
+    Flip2 flip2;
     static Rigidbody coin;
     private static Vector3 coinVelocity;
 
@@ -16,7 +17,7 @@ public class Flip : MonoBehaviour
     public GameObject coin2;
     static Rigidbody coin2rb;
     public static Vector3 coin2Velocity;
-    Flip2 flip2;
+
 
 
     bool flipped = false;

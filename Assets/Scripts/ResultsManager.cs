@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ResultsManager : MonoBehaviour
 {
-    //CashValue cashValue;
     WagerValue wagerValue;
     BettingGameManager bettingGameManager;
 
@@ -71,10 +70,9 @@ public class ResultsManager : MonoBehaviour
 
     public void Payout()
     {
-
+       
         int heads1result = heads1.GetComponent<Heads>().Result();
         int tails1result = tails1.GetComponent<Tails>().Result();
-
         int heads2result = heads2.GetComponent<Heads>().Result();
         int tails2result = tails2.GetComponent<Tails>().Result();
 
@@ -130,10 +128,5 @@ public class ResultsManager : MonoBehaviour
 
         }
 
-    }
-
-    void Update()
-    {
-        
     }
 }
