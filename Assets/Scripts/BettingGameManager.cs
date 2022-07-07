@@ -12,7 +12,7 @@ public class BettingGameManager : MonoBehaviour
 
     //Other Manager Scripts
     CashValue cashValue;
-    WagerValue wagerValue;
+    public WagerValue wagerValue;
 
     //Text names
     public Text cashStackAmount;
@@ -60,12 +60,45 @@ public class BettingGameManager : MonoBehaviour
     void Start()
     {
 
-        NewGame();
+        FirstGame();
         soundManager.ambiance.clip = soundManager.backgroundConversation;
         soundManager.ambiance.Play();
         Debug.Log("NewGame");
     }
 
+    public void FirstGame()
+    {
+        cashValue = GameObject.FindGameObjectWithTag("CashManager").GetComponent<CashValue>();
+
+        GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().betAmount = 1;
+        GameObject.FindWithTag("WagerManager").GetComponent<WagerValue>().wageredAmount = 0;
+        wagerManager.GetComponent<WagerValue>().DisplayTheNumber();
+
+
+        playerChoice = 0;
+        cashStackAmount.text = "$" + cashValue.playerCashStack;
+
+        //selecting canvas and camera
+        flipCoinsCanvas.gameObject.SetActive(false);
+        bettingChoicesCanvas.gameObject.SetActive(false);
+        Coin1.gameObject.SetActive(false);
+        Coin2.gameObject.SetActive(false);
+        thirdPersonCamera.SetActive(false);
+        bettingValueCanvas.SetActive(false);
+        backButton.gameObject.SetActive(false);
+        resultsCanvas.SetActive(false);
+        newGameButton.gameObject.SetActive(false);
+
+        bettingChoicesCanvas.gameObject.SetActive(true);
+        mainMenuCamera.SetActive(true);
+        threeBettingButtons.gameObject.SetActive(true);
+        flipButton.gameObject.SetActive(true);
+
+
+        resultText.text = "";
+        playerFeedbackText.text = "Welcome to Two-Up!\n What result do you think the coins will land on?";
+
+    }
     public void NewGame()
     {
         cashValue = GameObject.FindGameObjectWithTag("CashManager").GetComponent<CashValue>();
@@ -202,6 +235,7 @@ public class BettingGameManager : MonoBehaviour
         //Debug.Log("Results screen Proc");
         resultsManager.GetComponent<ResultsManager>().Payout();
 
+
     }
 
     public void GamerOverScreen()
@@ -214,11 +248,34 @@ public class BettingGameManager : MonoBehaviour
         flipCoinsCanvas.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
         resultsCanvas.SetActive(false);
+
+        //sound for when player runs out of money goes here
     }
 
     public void WinnerScreen()
     {
+        if (wagerValue.betAmount > 25)
+        {
+            soundManager.ambiance.clip = soundManager.bigWin;
+            soundManager.ambiance.Play();
+        }
+        else
+        {
+            soundManager.ambiance.clip = soundManager.smallWin;
+            soundManager.ambiance.Play();
+        }
+
+        resultsCanvas.SetActive(true); 
+        //sound for cheers can go here
+    }
+
+    public void LosersScreen()
+    {
+
         resultsCanvas.SetActive(true);
+
+        //sound for lose goes here
+
     }
 
     void Update()

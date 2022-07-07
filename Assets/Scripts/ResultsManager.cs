@@ -114,7 +114,7 @@ public class ResultsManager : MonoBehaviour
                 else
                 {
                     resultText.text = "Your bet was incorrect!";
-                    bettingManager.GetComponent<BettingGameManager>().WinnerScreen();
+                    bettingManager.GetComponent<BettingGameManager>().LosersScreen();
 
                     Debug.Log("Loss Triggered");
                     if (playerCashStack <= 0)

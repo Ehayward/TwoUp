@@ -7,18 +7,13 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource ambiance;
     public AudioSource coins;
+    
     public AudioClip coinFlip;
     public AudioClip backgroundConversation;
+    public AudioClip coinCollide;
+    public AudioClip smallWin;
+    public AudioClip bigWin;
+    
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

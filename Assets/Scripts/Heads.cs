@@ -9,6 +9,8 @@ public class Heads : MonoBehaviour
     public int headsResult;
     bool Landed = false;
 
+    public SoundManager soundManager;
+
     public GameObject coinCarrier;
     static Rigidbody coin;
     public static Vector3 coinVelocity;
@@ -23,6 +25,14 @@ public class Heads : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.transform.tag == "Table")
+        {
+            soundManager.coins.clip = soundManager.coinCollide;
+            soundManager.coins.Play();
+        }
+    }
     public void OnTriggerStay(Collider other)
     {
         Landed = true;

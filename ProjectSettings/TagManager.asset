@@ -16,6 +16,7 @@ TagManager:
   - Coin 2 Tails
   - Coin 2 Side
   - Coin2Self
+  - Table
   layers:
   - Default
   - TransparentFX
