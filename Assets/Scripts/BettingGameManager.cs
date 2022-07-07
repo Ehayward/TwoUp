@@ -59,10 +59,11 @@ public class BettingGameManager : MonoBehaviour
 
     void Start()
     {
+
+        NewGame();
         soundManager.ambiance.clip = soundManager.backgroundConversation;
         soundManager.ambiance.Play();
         Debug.Log("NewGame");
-        NewGame();
     }
 
     public void NewGame()

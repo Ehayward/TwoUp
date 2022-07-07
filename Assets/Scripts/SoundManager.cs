@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource coins;
     public AudioClip coinFlip;
     public AudioClip backgroundConversation;
+
     // Start is called before the first frame update
     void Start()
     {
