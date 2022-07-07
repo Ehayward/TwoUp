@@ -63,7 +63,6 @@ public class BettingGameManager : MonoBehaviour
         FirstGame();
         soundManager.ambiance.clip = soundManager.backgroundConversation;
         soundManager.ambiance.Play();
-        Debug.Log("NewGame");
     }
 
     public void FirstGame()
@@ -254,15 +253,15 @@ public class BettingGameManager : MonoBehaviour
 
     public void WinnerScreen()
     {
-        if (wagerValue.betAmount > 25)
+        if (wagerValue.betAmount >= 25)
         {
-            soundManager.ambiance.clip = soundManager.bigWin;
-            soundManager.ambiance.Play();
+            soundManager.crowd.clip = soundManager.bigWin;
+            soundManager.crowd.Play();
         }
         else
         {
-            soundManager.ambiance.clip = soundManager.smallWin;
-            soundManager.ambiance.Play();
+            soundManager.crowd.clip = soundManager.smallWin;
+            soundManager.crowd.Play();
         }
 
         resultsCanvas.SetActive(true); 
@@ -277,6 +276,7 @@ public class BettingGameManager : MonoBehaviour
         //sound for lose goes here
 
     }
+
 
     void Update()
     {

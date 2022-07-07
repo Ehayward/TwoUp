@@ -13,6 +13,8 @@ public class WagerValue : MonoBehaviour
     public GameObject increaseButton;
     public GameObject decreaseButton;
 
+    public SoundManager soundManager;
+
     public int betAmount = 1;
     public int wageredAmount;
 
@@ -22,17 +24,29 @@ public class WagerValue : MonoBehaviour
         DisplayTheNumber();
     }
 
+    public void DecreaseSound()
+    {
+        soundManager.ui.clip = soundManager.decreaseBet;
+        soundManager.ui.Play();
+    }
+
+    public void IncreaseSound()
+    {
+        soundManager.ui.clip = soundManager.increaseBet;
+        soundManager.ui.Play();
+    }
     public void IncreaseAndDisplay()
     {
-
+        IncreaseSound();
         IncreaseTheValueBy1();
         DisplayTheNumber();
     }
     public void DecreaseAndDisplay()
     {
-
+        DecreaseSound();
         DecreaseTheValueBy1();
         DisplayTheNumber();
+
     }
 
     private void IncreaseTheValueBy1()
