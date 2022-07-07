@@ -24,11 +24,13 @@ public class WagerValue : MonoBehaviour
 
     public void IncreaseAndDisplay()
     {
+
         IncreaseTheValueBy1();
         DisplayTheNumber();
     }
     public void DecreaseAndDisplay()
     {
+
         DecreaseTheValueBy1();
         DisplayTheNumber();
     }

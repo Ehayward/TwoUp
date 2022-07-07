@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BettingGameManager : MonoBehaviour
 {
+    //SoundManager
+    public SoundManager soundManager;
     //Option variable.
     public int playerChoice;
 
@@ -57,7 +59,11 @@ public class BettingGameManager : MonoBehaviour
 
     void Start()
     {
+
         NewGame();
+        soundManager.ambiance.clip = soundManager.backgroundConversation;
+        soundManager.ambiance.Play();
+        Debug.Log("NewGame");
     }
 
     public void NewGame()
