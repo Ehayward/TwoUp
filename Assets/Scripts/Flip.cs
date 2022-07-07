@@ -12,6 +12,7 @@ public class Flip : MonoBehaviour
     public GameObject flipButton;
     public GameObject bettingManager;
     public GameObject coinself;
+    public SoundManager soundManager;
 
     //coin2 details
     public GameObject coin2;
@@ -28,10 +29,13 @@ public class Flip : MonoBehaviour
 
     public void cointoss()
     {
+        soundManager.coins.clip = soundManager.coinFlip;
+        soundManager.coins.Play();
+
         //KeyCode assigns which key gets pressed to trigger the "flip", the && means you cannot press while the vector3 velocity is >
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0))
         {
-            //This sets the power of spin you would like and what direction.
+                  //This sets the power of spin you would like and what direction.
             float dirX = Random.Range(0, 500);
             float dirY = Random.Range(0, 500);
             float dirZ = Random.Range(110, 300);
