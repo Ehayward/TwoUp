@@ -258,6 +258,7 @@ public class BettingGameManager : MonoBehaviour
 
     public void WinnerScreen()
     {
+
         if (wagerValue.betAmount >= 25)
         {
             announcer.BigWin();

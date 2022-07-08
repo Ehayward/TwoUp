@@ -7,12 +7,14 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource ambiance;
     public AudioSource coins;
+    public AudioSource coinsAir;
     public AudioSource crowd;
     public AudioSource ui;
     public AudioSource announcer;
     
     public AudioClip coinFlip;
     public AudioClip backgroundConversation;
+    public AudioClip coinWhoosh;
     public AudioClip coinCollide;
     public AudioClip smallWin;
     public AudioClip bigWin;
@@ -22,7 +24,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip increaseBet;
 
 
-    public AudioClip annLockin;
+    public AudioClip[] annLockIn;
     public AudioClip annWin;
     public AudioClip annBigWin;
     public AudioClip annLoss;

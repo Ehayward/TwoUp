@@ -31,9 +31,12 @@ public class Flip : MonoBehaviour
 
     public void cointoss()
     {
+        //Play coin flip sound and coin whoosh sound
         announcer.RandomizeSound(soundManager.coins);
         soundManager.coins.clip = soundManager.coinFlip;
         soundManager.coins.Play();
+        soundManager.coinsAir.clip = soundManager.coinWhoosh;
+        soundManager.coinsAir.Play();
 
         //KeyCode assigns which key gets pressed to trigger the "flip", the && means you cannot press while the vector3 velocity is >
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0))
@@ -64,6 +67,7 @@ public class Flip : MonoBehaviour
         if (this.transform.position.y > 5)
         {
             flipped = true;
+
         }
 
         if ((coinVelocity[0] == 0) && (coinVelocity[1] == 0) && (coinVelocity[2] == 0) && flipped == true && (coin2Velocity[0] == 0) && (coin2Velocity[1] == 0) && (coin2Velocity[2] == 0))

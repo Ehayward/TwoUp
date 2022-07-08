@@ -14,15 +14,18 @@ public class Announcer : MonoBehaviour
 
     }
 
+
+
     public void LockIn()
     {
-        soundManager.announcer.clip = soundManager.annLockin;
+        soundManager.announcer.clip = soundManager.annLockIn[Random.Range(0, soundManager.annLockIn.Length)];
         soundManager.announcer.Play();
     }
 
     public void Win()
     {
         soundManager.announcer.clip = soundManager.annWin;
+        soundManager.announcer.Play();
     }
 
     public void BigWin()
