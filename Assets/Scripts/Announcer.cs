@@ -22,31 +22,46 @@ public class Announcer : MonoBehaviour
 
     public void Win()
     {
-
+        soundManager.announcer.clip = soundManager.annWin;
     }
 
+    public void BigWin()
+    {
+        soundManager.announcer.clip = soundManager.annBigWin;
+        soundManager.announcer.Play();
+    }
     public void Loss()
     {
-
+        soundManager.announcer.clip = soundManager.annLoss;
+        soundManager.announcer.Play();
+    }
+    public void BigLoss()
+    {
+        soundManager.announcer.clip = soundManager.annBigLoss;
+        soundManager.announcer.Play();
     }
 
     public void PlayAgain()
     {
-
+        soundManager.announcer.clip = soundManager.annPlayAgain;
+        soundManager.announcer.Play();
     }
 
     public void Quit()
     {
-
+        soundManager.announcer.clip = soundManager.annQuit;
+        soundManager.announcer.Play();
     }
 
     public void NoMoney()
     {
-
+        soundManager.announcer.clip = soundManager.annNoMoney;
+        soundManager.announcer.Play();
     }
 
     public void WinStreak()
     {
-
+        soundManager.announcer.clip = soundManager.annWinStreak;
+        soundManager.announcer.Play();
     }
 }

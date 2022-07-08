@@ -14,6 +14,7 @@ public class WagerValue : MonoBehaviour
     public GameObject decreaseButton;
 
     public SoundManager soundManager;
+    public Announcer announcer;
 
     public int betAmount = 1;
     public int wageredAmount;
@@ -104,6 +105,8 @@ public class WagerValue : MonoBehaviour
     public void LockInBet()
     {
         wageredAmount = betAmount;
+        announcer.LockIn();
+        
     }
 
     public void ResetBetAmount()

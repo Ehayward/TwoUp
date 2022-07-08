@@ -16,14 +16,16 @@ public class SoundManager : MonoBehaviour
     public AudioClip coinCollide;
     public AudioClip smallWin;
     public AudioClip bigWin;
+    public AudioClip smallLoss;
+    public AudioClip bigLoss;
     public AudioClip decreaseBet;
     public AudioClip increaseBet;
 
 
     public AudioClip annLockin;
-    public AudioClip annSmallWin;
+    public AudioClip annWin;
     public AudioClip annBigWin;
-    public AudioClip annSmallLoss;
+    public AudioClip annLoss;
     public AudioClip annBigLoss;
     public AudioClip annPlayAgain;
     public AudioClip annQuit;

@@ -8,6 +8,7 @@ public class ResultsManager : MonoBehaviour
     WagerValue wagerValue;
     BettingGameManager bettingGameManager;
 
+
     int coin1Heads;
     int coin1Tails;
     int coin1Side;

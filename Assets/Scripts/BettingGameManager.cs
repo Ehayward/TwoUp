@@ -7,8 +7,10 @@ public class BettingGameManager : MonoBehaviour
 {
     //SoundManager
     public SoundManager soundManager;
+    public Announcer announcer;
     //Option variable.
     public int playerChoice;
+    int winStreak = 0;
 
     //Other Manager Scripts
     CashValue cashValue;
@@ -135,6 +137,7 @@ public class BettingGameManager : MonoBehaviour
 
     public void BetAgain()
     {
+        announcer.PlayAgain();
         cashStackAmount.text = "$" + cashValue.playerCashStack;
         playerChoice = 0;
 
@@ -239,7 +242,7 @@ public class BettingGameManager : MonoBehaviour
 
     public void GamerOverScreen()
     {
-
+        announcer.NoMoney();
         newGameButton.gameObject.SetActive(true);
 
         bettingValueCanvas.SetActive(false);
@@ -248,6 +251,8 @@ public class BettingGameManager : MonoBehaviour
         backButton.gameObject.SetActive(false);
         resultsCanvas.SetActive(false);
 
+        winStreak = 0;
+      
         //sound for when player runs out of money goes here
     }
 
@@ -255,25 +260,43 @@ public class BettingGameManager : MonoBehaviour
     {
         if (wagerValue.betAmount >= 25)
         {
+            announcer.BigWin();
             soundManager.crowd.clip = soundManager.bigWin;
             soundManager.crowd.Play();
         }
         else
         {
+            announcer.Win();
             soundManager.crowd.clip = soundManager.smallWin;
             soundManager.crowd.Play();
         }
 
+        winStreak++;
+        if (winStreak >= 3)
+        {
+            announcer.WinStreak();
+        }
         resultsCanvas.SetActive(true); 
         //sound for cheers can go here
     }
 
     public void LosersScreen()
     {
-
+        if (wagerValue.betAmount >= 25)
+        {
+            announcer.BigLoss();
+            soundManager.crowd.clip = soundManager.bigLoss;
+            soundManager.crowd.Play();
+        }
+        else
+        {
+            announcer.Loss();
+            soundManager.crowd.clip = soundManager.smallLoss;
+            soundManager.crowd.Play();
+        }
+        winStreak = 0;
         resultsCanvas.SetActive(true);
 
-        //sound for lose goes here
 
     }
 
