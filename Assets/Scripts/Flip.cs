@@ -19,6 +19,8 @@ public class Flip : MonoBehaviour
     static Rigidbody coin2rb;
     public static Vector3 coin2Velocity;
 
+    public Announcer announcer;
+
     bool flipped = false;
 
     void Start()
@@ -29,6 +31,7 @@ public class Flip : MonoBehaviour
 
     public void cointoss()
     {
+        announcer.RandomizeSound(soundManager.coins);
         soundManager.coins.clip = soundManager.coinFlip;
         soundManager.coins.Play();
 

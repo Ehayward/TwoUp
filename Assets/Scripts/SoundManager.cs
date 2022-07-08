@@ -21,15 +21,15 @@ public class SoundManager : MonoBehaviour
 
 
     public AudioClip annLockin;
-    public AudioClip annOutcomeLockin;
     public AudioClip annSmallWin;
     public AudioClip annBigWin;
     public AudioClip annSmallLoss;
     public AudioClip annBigLoss;
     public AudioClip annPlayAgain;
+    public AudioClip annQuit;
     public AudioClip annNoMoney;
     public AudioClip annWinStreak;
-    public AudioClip annMaintainWinStreak;
+
 
 
 }

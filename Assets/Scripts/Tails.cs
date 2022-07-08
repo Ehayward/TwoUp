@@ -10,6 +10,7 @@ public class Tails : MonoBehaviour
     bool Landed = false;
 
     public SoundManager soundManager;
+    public Announcer announcer;
 
     public GameObject coinCarrier;
     static Rigidbody coin;
@@ -29,6 +30,7 @@ public class Tails : MonoBehaviour
     {
         if (other.gameObject.transform.tag == "Table")
         {
+            announcer.RandomizeSound(soundManager.coins);
             soundManager.coins.clip = soundManager.coinCollide;
             soundManager.coins.Play();
         }

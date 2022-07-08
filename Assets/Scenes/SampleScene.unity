@@ -156,7 +156,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &45440120
 PrefabInstance:
@@ -908,6 +908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130401021}
   - component: {fileID: 130401020}
+  - component: {fileID: 130401022}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -931,7 +932,7 @@ MonoBehaviour:
   coins: {fileID: 1828475318}
   crowd: {fileID: 1230082278}
   ui: {fileID: 2122222853}
-  announcer: {fileID: 0}
+  announcer: {fileID: 923606182}
   coinFlip: {fileID: 8300000, guid: aa7cff14266eea34ca48b0ef2753420e, type: 3}
   backgroundConversation: {fileID: 8300000, guid: 2fe9324d849d0f748a9de6368aad7c35, type: 3}
   coinCollide: {fileID: 8300000, guid: aa7cff14266eea34ca48b0ef2753420e, type: 3}
@@ -940,15 +941,14 @@ MonoBehaviour:
   decreaseBet: {fileID: 8300000, guid: dfc571b41553c734b9247e04a718d917, type: 3}
   increaseBet: {fileID: 8300000, guid: 3342a82eb39df7c488bbfccda8c5495b, type: 3}
   annLockin: {fileID: 0}
-  annOutcomeLockin: {fileID: 0}
   annSmallWin: {fileID: 0}
   annBigWin: {fileID: 0}
   annSmallLoss: {fileID: 0}
   annBigLoss: {fileID: 0}
   annPlayAgain: {fileID: 0}
+  annQuit: {fileID: 0}
   annNoMoney: {fileID: 0}
   annWinStreak: {fileID: 0}
-  annMaintainWinStreak: {fileID: 0}
 --- !u!4 &130401021
 Transform:
   m_ObjectHideFlags: 0
@@ -963,6 +963,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130401022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130401019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd67034bc79fc5742b69fefca970704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundManager: {fileID: 130401020}
 --- !u!1001 &141822276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1274,7 +1287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 10.41, y: 0, z: 0}
 --- !u!114 &220710975
 MonoBehaviour:
@@ -1354,7 +1367,7 @@ Transform:
   - {fileID: 1303616087}
   - {fileID: 1075343630}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &232062789
 GameObject:
@@ -2444,7 +2457,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592971712
 GameObject:
@@ -3461,6 +3474,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 220710971}
     - target: {fileID: 5569551068782535452, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: announcer
+      value: 
+      objectReference: {fileID: 130401022}
+    - target: {fileID: 5569551068782535452, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: coinCarrier
       value: 
       objectReference: {fileID: 1828475316}
@@ -3544,6 +3561,10 @@ PrefabInstance:
       propertyPath: txt
       value: 
       objectReference: {fileID: 1020906284}
+    - target: {fileID: 8998879002354024203, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: announcer
+      value: 
+      objectReference: {fileID: 130401022}
     - target: {fileID: 8998879002354024203, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: coinCarrier
       value: 
@@ -3937,6 +3958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 923606181}
+  - component: {fileID: 923606182}
   m_Layer: 0
   m_Name: Announcer
   m_TagString: Untagged
@@ -3958,6 +3980,102 @@ Transform:
   m_Father: {fileID: 1453009429}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &923606182
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923606180}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &940385668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4881,7 +4999,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1106704764
 MonoBehaviour:
@@ -5124,6 +5242,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 220710971}
     - target: {fileID: 5569551068782535452, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: announcer
+      value: 
+      objectReference: {fileID: 130401022}
+    - target: {fileID: 5569551068782535452, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: coinCarrier
       value: 
       objectReference: {fileID: 83968950}
@@ -5203,6 +5325,10 @@ PrefabInstance:
       propertyPath: txt
       value: 
       objectReference: {fileID: 254133360}
+    - target: {fileID: 8998879002354024203, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
+      propertyPath: announcer
+      value: 
+      objectReference: {fileID: 130401022}
     - target: {fileID: 8998879002354024203, guid: 6c08c21634418ea4d94ccc3180d3f07f, type: 3}
       propertyPath: coinCarrier
       value: 
@@ -11523,7 +11649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453009429}
   m_Layer: 0
-  m_Name: ambiantSounds
+  m_Name: soundSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11545,7 +11671,7 @@ Transform:
   - {fileID: 2122222854}
   - {fileID: 923606181}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475697591
 GameObject:
@@ -12250,7 +12376,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1623825940
 MonoBehaviour:
@@ -13256,6 +13382,7 @@ MonoBehaviour:
   coinself: {fileID: 1828475316}
   soundManager: {fileID: 130401020}
   coin2: {fileID: 83968950}
+  announcer: {fileID: 130401022}
 --- !u!82 &1828475318
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13342,7 +13469,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.228
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -13944,7 +14071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2041007202
 MonoBehaviour:
